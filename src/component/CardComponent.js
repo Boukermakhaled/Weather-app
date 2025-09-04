@@ -7,6 +7,9 @@ import {useEffect, useState} from 'react'
 
 //translation
 import { useTranslation } from 'react-i18next';
+// media query
+import useMediaQuery from "@mui/material";
+
   let cancelAxios = null;
 export default function CardComponent({local}){
     const { t, i18n } = useTranslation();
@@ -60,7 +63,7 @@ export default function CardComponent({local}){
   }
   },[])
     return(
-        <Card sx={{ minWidth: 500, 
+        <Card className="Card" sx={{  
         bgcolor:"#ffffff17", 
         borderRadius:"24px",
         border:".8px solid #ffffff2c",
@@ -80,7 +83,7 @@ export default function CardComponent({local}){
           <div style={{textAlign:"right",display:"flex",flexDirection:"column", gap:"10px"}}>
             <div style={{height:"100%",display:"flex", justifyContent:"space-between",alignItems:"center", gap:"20px"}}>
              <img src={weather.icon}/> 
-              <Typography  sx={{fontWeight:400, fontSize:"80px"}}>{temp.tmp}°</Typography>
+              <Typography  sx={{fontWeight:400, fontSize:"80px"}} variant="h3 ">{temp.tmp}°</Typography>
             </div>
             <Typography sx={{fontWeight:300}}>{t(`${weather.description}`)}</Typography>
             <div style={{display:"flex" ,justifyContent:"end", gap:"20px"}}>

@@ -28,7 +28,7 @@ const [lang, setLang] = useState('en')
   return (
     <div className="App" style={{backgroundColor:"#113F67"}}>
       <ThemeProvider theme={theme}>
-        <Container  sx={{width:"fit-Content", height:"100vh",display:"flex", justifyContent:"center", alignItems:"center",flexDirection:"column"}}>  
+        <Container maxWidth="sm"  sx={{width:"fit-Content", height:"100vh",display:"flex", justifyContent:"center", alignItems:"center",flexDirection:"column"}}>  
         
        <CardComponent local={lang}/>
        <Button sx={{alignSelf:"start",color:"#fff"}} onClick={()=>{

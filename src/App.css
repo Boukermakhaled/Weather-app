@@ -53,3 +53,21 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 576px) {
+  .Card{
+    max-width: 360px;
+  }
+  svg{
+    font-size: 100px !important;
+  }
+  img{
+    width: 65px !important;
+  }
+  p{
+    font-size: 14px !important;
+  }
+  h3{
+    font-size: 50px !important;
+  }
+}
