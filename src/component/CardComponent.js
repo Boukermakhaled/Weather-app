@@ -63,7 +63,9 @@ export default function CardComponent({local}){
   }
   },[])
     return(
-        <Card className="Card" sx={{  
+        <Card  
+        dir={local == 'ar'? 'ltr' : 'rtl'}
+        className="Card" sx={{  
         bgcolor:"#ffffff17", 
         borderRadius:"24px",
         border:".8px solid #ffffff2c",
@@ -85,7 +87,7 @@ export default function CardComponent({local}){
              <img src={weather.icon}/> 
               <Typography  sx={{fontWeight:400, fontSize:"80px"}} variant="h3 ">{temp.tmp}°</Typography>
             </div>
-            <Typography sx={{fontWeight:300}}>{t(`${weather.description}`)}</Typography>
+            <Typography textAlign={local == 'ar' ? 'right' : 'left'} sx={{fontWeight:300}}>{t(`${weather.description}`)}</Typography>
             <div style={{display:"flex" ,justifyContent:"end", gap:"20px"}}>
               <Typography sx={{fontWeight:500}}>{temp.min}° :{t('Min')}</Typography>
               <Typography sx={{fontWeight:500}}>{temp.max}° :{t('Max')}</Typography>
